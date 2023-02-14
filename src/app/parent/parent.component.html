@@ -1,0 +1,53 @@
+<div class="col-sm-9" id="dim">
+    <div class="text-center">
+
+        <h4><small>BUY PRODUCTS</small></h4>
+    </div>
+        <div class="alert alert-success border" style="display: flex;align-items:center ;" *ngIf="Addproduct">
+            <span class="text-danger">{{Addproduct}}</span> is Selected and Add This caet
+            <button class="btn btn-outline-dark" style="margin-left:auto;">Cart</button>
+        </div>
+
+    <div class="row ">
+        <div class="col-md-12">
+            <div class="card">
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/06/20/23/15/coffee-2425303__340.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Laptop</h5>
+                        <a  class="btn btn-success col-12" (click)="onSelect('Laptop')" >Buy</a>
+                </div>
+              </div>
+
+              <div class="card" >
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2014/11/17/03/44/samsung-534265__340.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Mobile</h5>
+                   <a  class="btn btn-success col-12"  (click)="onSelect('Mobile')">Buy</a>
+                </div>
+              </div>
+
+              <div class="card" >
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2015/02/07/20/58/tv-627876__340.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Telivision</h5>
+                  <a  class="btn btn-success col-12" (click)="onSelect('Telivision')">Buy</a>
+                </div>
+              </div>
+              <div class="card" >
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2020/07/20/15/17/washing-machine-5423359__340.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Washing-Mashine</h5>
+                 <a  class="btn btn-success col-12" (click)="onSelect('Washing-Mashine')">Buy</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <br>
+    <br>
+        <div class="col-md-12 bg-info text-white text-center py-2">
+            <h3 *ngIf="!productselect">Buy any Products</h3>
+            <h3 *ngIf="productselect">{{productName}} is Selected</h3>
+
+            <button class="btn btn-secondary" (click)="onAdd()">Add to Cart</button>
+        </div>
+        </div>

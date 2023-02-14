@@ -1,0 +1,11 @@
+<div class="col-sm-9" id="dim">
+    <h4><small>RECENT POSTS</small></h4>
+    <hr>
+        <div class="products">
+            <div *ngIf="statusOnline">
+             <div  *ngFor="let proitem of  products">
+                {{proitem.name}}
+             </div>
+            </div>
+        </div>
+    </div>
